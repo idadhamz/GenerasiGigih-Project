@@ -1,0 +1,51 @@
+* {
+    font-family: "Mulish", sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+.playlist > .playlist-item {
+    width: fit-content;
+    height: fit-content;
+
+    padding: 15px;
+    margin: 10px 0;
+
+    border: 1px solid gainsboro;
+}
+
+.playlist > .playlist-item > .img-div {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.playlist > .playlist-item > button {
+    width: 100%;
+    height: auto;
+
+    border: none;
+    background-color: #00A512;
+    color: white;
+
+    padding: 7px 12px;
+}
+
+.playlist > .playlist-item > button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
