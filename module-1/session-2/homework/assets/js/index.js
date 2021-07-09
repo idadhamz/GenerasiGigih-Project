@@ -27,11 +27,46 @@ const getData = () => {
     })
     .then((data) => {
         console.log("resolved: ", data);
+
+        // let img = document.getElementById("img");
+        // let title = document.getElementById("title");
+        // let artist = document.getElementById("artist");
+        // let album = document.getElementById("album");
+        // let a = document.querySelector(".playlist-item a");
+
+        // img.setAttribute("src", data.album.images[0].url);
+        // img.setAttribute("width", data.album.images[0].width);
+        // img.setAttribute("height", data.album.images[0].height);
+
+        // title.innerText = data.name;
+        // artist.innerText = data.artists[0].name;
+        // album.innerText = data.album.name;
+        // a.setAttribute("href", data.href);
+
+        valuePlaylist(data);
+
     })
     .catch((err) => {
         console.log("error", err);
         alert(`error ${err}`);
     })
+}
+
+const valuePlaylist = (data) => {
+    let img = document.getElementById("img");
+    let title = document.getElementById("title");
+    let artist = document.getElementById("artist");
+    let album = document.getElementById("album");
+    let a = document.querySelector(".playlist-item a");
+
+    img.setAttribute("src", data.album.images[0].url);
+    img.setAttribute("width", data.album.images[0].width);
+    img.setAttribute("height", data.album.images[0].height);
+
+    title.innerText = data.name;
+    artist.innerText = data.artists[0].name;
+    album.innerText = data.album.name;
+    a.setAttribute("href", data.href);
 }
 
 getData();
