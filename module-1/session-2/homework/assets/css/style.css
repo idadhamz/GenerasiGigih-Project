@@ -53,7 +53,7 @@ form div input, form div textarea {
     height: 200px;
 }
 
-.playlist > .playlist-item > button {
+#submit, .playlist > .playlist-item > button {
     width: 100%;
     height: auto;
 
@@ -64,7 +64,7 @@ form div input, form div textarea {
     padding: 7px 12px;
 }
 
-.playlist > .playlist-item > button:hover {
+#submit:hover, .playlist > .playlist-item > button:hover {
     opacity: 0.7;
     cursor: pointer;
 }

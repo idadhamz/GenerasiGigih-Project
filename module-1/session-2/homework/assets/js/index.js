@@ -4,7 +4,14 @@ const alertSubmit = (e) => {
     let title = document.getElementById("title").value;
     let description = document.getElementById("description").value;
 
-    alert(`Berhasil input dengan title "${title}" dan description "${description}"`);
+    console.log(title);
+    console.log(description);
+
+    if(title == "" || description == "") {
+        alert(`Form input keduanya harus diisi!`);
+    } else {
+        alert(`Berhasil input dengan title (${title}) dan description (${description})`);
+    }
 };
 
 document.getElementById("submit").addEventListener("click", alertSubmit);
